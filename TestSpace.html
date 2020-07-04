@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script src="Board.js"></script>
+		<script src="GameEngine.js"></script>
+		<script src="Pieces.js"></script>
+		<script src="Player.js"></script>
+		<script src="RandGenerator.js"></script>
+		<script src="Main.js"></script>
+		<link rel="stylesheet" type="text/css" href="Style.css">
+		<title>The Royal Game of Doom</title>
+	</head>
+	<body>
+		<div id='div1'>
+			<p>Players</p>
+		</div>
+		<div id='div2'>
+			<p>Board</p>
+			<table id='board'>
+				<tr id='rowP2'>
+					 <th id='special'>*</th>
+												<th>*</th>
+												<th>*</th>
+												<th>*</th>
+						 <th id='empty'>*</th>
+						 <th id='empty'>*</th>
+					 <th id='special'>*</th>
+												<th>*</th>
+				</tr>
+				<tr id='warZone'>
+												<th>*</th>
+												<th>*</th>
+												<th>*</th>
+					 <th id='special'>*</th>
+												<th>*</th>
+												<th>*</th>
+												<th>*</th>
+												<th>*</th>
+				</tr>
+				<tr id='rowP1'>
+					 <th id='special'>*</th>
+												<th>*</th>
+												<th>*</th>
+												<th>*</th>
+						 <th id='empty'>*</th>
+						 <th id='empty'>*</th>
+					 <th id='special'>*</></th>
+												<th>*</th>
+				</tr>
+			</table>
+		</div>
+		<div id='div3'>
+			<p>Generator</p>
+		</div>
+		<div id='div4'>
+			<p>Game</p>
+		</div>
+		<script>
+			document.getElementById('div1').innerHTML += 
+				"Player 1: " + player1.getId() + "<br/>"
+				+ "Player 1: " + player1.getBoard() + "<br/>"
+				+ "Player 2: " + player2.getId() + "<br/>"
+				+ "Player 2: " + player2.getBoard() + "<br/>";
+			
+			document.getElementById('div3').innerHTML +=
+				"Draw: " + generator.generate() + "<br/>"
+				+ "Value Set: " + generator.getValSet() + "<br/>";
+				
+			var sum = 0;
+			for(var i = 0; i<1000; i++)
+			{
+				sum += generator.generate();
+			}
+			sum /= 1000;
+			
+			document.getElementById('div3').innerHTML +=
+				"Mean: " + sum + "<br/>";
+				
+			board.update(player1.getBoard(), player2.getBoard());
+		</script>
+	</body>
+</html>
