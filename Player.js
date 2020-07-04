@@ -34,12 +34,12 @@ class Player
 	}
 	updateBoard(enemyMove)
 	{
-		if(enemyMove.pos > 3)
+		if((enemyMove.pos > 3) && (enemyMove.pos < 12))
 			this.board[enemyMove.pos] = '0';
 		var boardSquare = this.board[enemyMove.newPos];
-		if((boardSquare < 12) && !(boardSquare === -1))
+		if((enemyMove.newPos < 12) && (enemyMove.newPos > 3))
 		{
-			if(boardSquare === 'f')
+			if(this.board[enemyMove.newPos] === 'f')
 				this.LosePiece();
 			this.board[enemyMove.newPos] = 'e';
 		}
@@ -48,4 +48,33 @@ class Player
 	{
 		return this.board;
 	}
+	canMove(moveDist)
+	{
+		if((this.pieces > 0) && (this.board[moveDist-1] === '0'))
+			return true;
+		for(var i=0;i<14;i++)
+		{
+			if(this.board[i] === 'f')
+			{
+				if(i+moveDist-1 < 14)
+				{
+					if(this.board[i+moveDist-1] === '0')
+						return true;
+					if(this.board[i+moveDist-1] === 'e')
+					{
+						if(!(i+moveDist-1 === 7))
+							return true;
+					}
+				}
+				else if(i+moveDist-1 === 14)
+					return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	
+	
+	
 }

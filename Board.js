@@ -8,7 +8,7 @@ class Board
 	update(board1, board2)
 	{
 		//row1 -> rowP2
-		var row = document.getElementById('rowP2').childNodes;
+		var row = document.querySelectorAll("#rowP2 th");
 		for(var i = 0; i < 4; i++)
 		{
 			if(board2[3-i] === 'f')
@@ -25,19 +25,17 @@ class Board
 		}
 		
 		//row2 -> warZone
-		var row = document.getElementById('warZone').childNodes;
+		row = document.querySelectorAll("#warZone th");
 		for(var i = 0; i < 8; i++)
 		{
-			document.write(i, ": ", row[i].innerHTML,"<br/>");
 			if(board1[i+4] === '0')
 				row[i].innerHTML="";
 			else
 				row[i].innerHTML=board1[i+4];
-			document.write(i, ": ", row[i].innerHTML,"<br/>");
 		}
 		
 		//row3 -> rowP3
-		var row = document.getElementById('rowP1').childNodes;
+		row = document.querySelectorAll("#rowP1 th");
 		for(var i = 0; i < 4; i++)
 		{
 			if(board1[3-i] === 'f')
@@ -51,6 +49,18 @@ class Board
 				row[i].innerHTML="f";
 			else
 				row[i].innerHTML="";
+		}
+	}
+	clear()
+	{
+		var row1 = document.querySelectorAll("#rowP2 th");
+		var row2 = document.querySelectorAll("#rowP1 th");
+		var row3 = document.querySelectorAll("#warZone th");
+		for(var i=0; i<8; i++)
+		{
+			row1[i].innerHTML="";
+			row2[i].innerHTML="";
+			row3[i].innerHTML="";
 		}
 	}
 }
