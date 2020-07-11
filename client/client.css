@@ -1,0 +1,64 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+#login_to_game
+{
+    margin: auto;
+    margin-top: 40px;
+    width: 400px;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+#login_to_game h2
+{
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+.input_box
+{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+input[type="text"], select
+{
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    padding: 6px;
+}
+select
+{
+    width: 162px;
+}
+button
+{
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 130px;
+}
+button:hover
+{
+    background-color: blue;
+    color: white;
+}
+#game_log
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+#game_screen
+{
+    display: none;
+}

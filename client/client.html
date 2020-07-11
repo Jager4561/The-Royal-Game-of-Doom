@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Game of Doom</title>
+    <link rel="stylesheet" href="client.css">
+</head>
+<body>
+    <div id="login_to_game">
+        <h2>The Royal Game of Doom</h2>
+        <form>
+            <div class="input_box">
+                <label for="username">Username</label><br>
+                <input id="username" type="text" required>
+            </div>
+            <div class="input_box">
+                <label for="username">Connect as</label><br>
+                <select id="conn_as">
+                    <option value="player1">Player 1</option>
+                    <option value="player2">Player 2</option>
+                    <option value="spectator" selected>Spectator</option>
+                </select>
+            </div>
+            <div class="input_box">
+                <button id="join" type="button">Join to game</button>
+            </div>
+        </form>
+    </div>
+    <div id="game_screen">
+        Game
+    </div>
+    <div id="game_log"></div>
+    <script src="conn.js"></script>
+</body>
+</html>
