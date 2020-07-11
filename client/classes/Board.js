@@ -62,5 +62,6 @@ class Board
 			row2[i].innerHTML="";
 			row3[i].innerHTML="";
 		}
+		document.write("Cleared<br/>");
 	}
 }

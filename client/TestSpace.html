@@ -2,12 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script src="Board.js"></script>
-		<script src="GameEngine.js"></script>
-		<script src="Pieces.js"></script>
-		<script src="Player.js"></script>
-		<script src="RandGenerator.js"></script>
-		<script src="Main.js"></script>
 		<link rel="stylesheet" type="text/css" href="Style.css">
 		<title>The Royal Game of Doom</title>
 	</head>
@@ -55,7 +49,18 @@
 		</div>
 		<div id='div4'>
 			<p>Game</p>
+			<button id='throwBtn'>Throw</button>
+			<button id='selectBtn'>Select</button>
+			<button id='moveBtn'>Move</button>
+			<br/> <br/>
 		</div>
+		
+		<script src="classes/Board.js"></script>
+		<script src="GameEngine.js"></script>
+		<script src="classes/Pieces.js"></script>
+		<script src="classes/Player.js"></script>
+		<script src="classes/RandGenerator.js"></script>
+		<script src="Main.js"></script>
 		<script>
 			document.getElementById('div1').innerHTML += 
 				"Player 1: " + player1.getId() + "<br/>"
@@ -78,6 +83,7 @@
 				"Mean: " + sum + "<br/>";
 				
 			board.update(player1.getBoard(), player2.getBoard());
+			
 		</script>
 	</body>
 </html>

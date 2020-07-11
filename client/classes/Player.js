@@ -44,6 +44,14 @@ class Player
 			this.board[enemyMove.newPos] = 'e';
 		}
 	}
+	updateMyBoard(myMove)
+	{
+		if(!(myMove.dist === 0))
+		{
+			this.board[myMove.pos] = '0';
+			this.board[myMove.newPos] = 'f';
+		}
+	}
 	getBoard()
 	{
 		return this.board;
