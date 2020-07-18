@@ -13,8 +13,10 @@ p
 th, td
 {
 	border: 1px solid black;
-	width: 25px;
-	height: 25px;
+	width: 64px;
+	height: 64px;
+	transition: 0.5s;
+	background-size: cover;
 }
 table
 {
@@ -33,31 +35,77 @@ table
 {
 	background-color: #909090;
 }
-#empty
+.empty
 {
 	border: none;
 	background-color: #f09090;
 }
-#special
+.special
 {
 	border-color: white;
+	background-image: url("OnOff.png");
+	background-size: cover;
 }
+
 #div1
 {
-	background: #909090; 
+	background-color: #909090; 
 }
 #div2
 {
-	background: #f09090; 
+	background-color: #f09090; 
 	padding-bottom: 50px;
 }
 #div3
 {
-	background: #90f090; 
+	background-color: #90f090; 
 }
 #div4
 {
-	background: #80a0f0; 
+	background-color: #80a0f0; 
+}
+#genSpace
+{
+	background-color: #ff00ff;
+	height: 96px;
+	width: 336px;
+	position: relative
+}
+#box1
+{
+	background-color: #00ff00;
+	height: 64px;
+	width: 64px;
+	position: absolute;
+	top: 16px;
+	left: 98px;
+}
+#box2
+{
+	background-color: #ffffff;
+	height: 64px;
+	width: 64px;
+	float: right;
+	margin-right: 16px;
+	margin-top: 16px;
+}
+#box3
+{
+	background-color: #ff0000;
+	height: 64px;
+	width: 64px;
+	float: left;
+	margin-left: 16px;
+	margin-top: 16px;
+}
+#box4
+{
+	background-color: #0000ff;
+	height: 64px;
+	width: 64px;
+	position: absolute;
+	top: 16px;
+	left: 176px;
 }
 #throwBtn
 {

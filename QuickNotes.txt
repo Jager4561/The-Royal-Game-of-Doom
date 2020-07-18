@@ -1,0 +1,5 @@
+Server-side:
+	check if last player got extra throw;
+	
+Add user side comunications
+	game feed back as some text what's going on

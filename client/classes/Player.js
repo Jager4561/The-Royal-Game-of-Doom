@@ -48,8 +48,14 @@ class Player
 	{
 		if(!(myMove.dist === 0))
 		{
-			this.board[myMove.pos] = '0';
-			this.board[myMove.newPos] = 'f';
+			if(myMove.pos === -1)
+				this.PlacePiece()
+			else
+				this.board[myMove.pos] = '0';
+			if(myMove.newPos === 14)
+				this.ScorePoint()
+			else
+				this.board[myMove.newPos] = 'f';
 		}
 	}
 	getBoard()
@@ -64,17 +70,17 @@ class Player
 		{
 			if(this.board[i] === 'f')
 			{
-				if(i+moveDist-1 < 14)
+				if(i+moveDist < 14)
 				{
-					if(this.board[i+moveDist-1] === '0')
+					if(this.board[i+moveDist] === '0')
 						return true;
-					if(this.board[i+moveDist-1] === 'e')
+					if(this.board[i+moveDist] === 'e')
 					{
-						if(!(i+moveDist-1 === 7))
+						if(!(i+moveDist === 7))
 							return true;
 					}
 				}
-				else if(i+moveDist-1 === 14)
+				else if(i+moveDist === 14)
 					return true;
 			}
 		}

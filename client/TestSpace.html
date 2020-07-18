@@ -6,6 +6,10 @@
 		<title>The Royal Game of Doom</title>
 	</head>
 	<body>
+		<div id='div4'>
+			<p>Game</p>
+			Here goes all game feed back for user
+		</div>
 		<div id='div1'>
 			<p>Players</p>
 		</div>
@@ -13,48 +17,57 @@
 			<p>Board</p>
 			<table id='board'>
 				<tr id='rowP2'>
-					 <th id='special'></th>
-												<th></th>
-												<th></th>
-												<th></th>
-						 <th id='empty'></th>
-						 <th id='empty'></th>
-					 <th id='special'></th>
-												<th></th>
+					<th id='b2e4' class='special'></th>
+					<th id='b2e3'></th>
+					<th id='b2e2'></th>
+					<th id='b2e1'></th>
+					<th id='b2add' class='empty'></th>
+					<th id='b2remove' class='empty'></th>
+					<th id='b2e14' class='special'></th>
+					<th id='b2e13'></th>
 				</tr>
 				<tr id='warZone'>
-												<th></th>
-												<th></th>
-												<th></th>
-					 <th id='special'></th>
-												<th></th>
-												<th></th>
-												<th></th>
-												<th></th>
+					<th id='wze5'></th>
+					<th id='wze6'></th>
+					<th id='wze7'></th>
+					<th id='wze8' class='special'></th>
+					<th id='wze9'></th>
+					<th id='wze10'></th>
+					<th id='wze11'></th>
+					<th id='wze12'></th>
 				</tr>
 				<tr id='rowP1'>
-					 <th id='special'></th>
-												<th></th>
-												<th></th>
-												<th></th>
-						 <th id='empty'></th>
-						 <th id='empty'></th>
-					 <th id='special'></th>
-												<th></th>
+					<th id='b1e4' class='special'></th>
+					<th id='b1e3'></th>
+					<th id='b1e2'></th>
+					<th id='b1e1'></th>
+					<th id='b1add' class='empty'></th>
+					<th id='b1remove' class='empty'></th>
+					<th id='b1e14' class='special'></th>
+					<th id='b1e13'></th>
 				</tr>
 			</table>
 		</div>
 		<div id='div3'>
 			<p>Generator</p>
-		</div>
-		<div id='div4'>
-			<p>Game</p>
+			<div id='genSpace'>
+				<div id='box1'>
+					
+				</div>
+				<div id='box2'>
+					
+				</div>
+				<div id='box3'>
+					
+				</div>
+				<div id='box4'>
+					
+				</div>
+			</div>
 			<button id='throwBtn'>Throw</button>
-			<button id='selectBtn'>Select</button>
-			<button id='moveBtn'>Move</button>
 			<br/> <br/>
 		</div>
-		
+
 		<script src="classes/Board.js"></script>
 		<script src="GameEngine.js"></script>
 		<script src="classes/Pieces.js"></script>
@@ -83,7 +96,7 @@
 				"Mean: " + sum + "<br/>";
 				
 			board.update(player1.getBoard(), player2.getBoard());
-			
+
 		</script>
 	</body>
 </html>

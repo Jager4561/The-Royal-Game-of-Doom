@@ -4,6 +4,8 @@ class Generator
 	{
 		this.sum = 0;
 		this.valSet = [0, 0, 0, 0];
+		this.frames = 11;
+		this.active = 0;
 	}
 	generate()
 	{
@@ -25,5 +27,28 @@ class Generator
 	{
 		this.sum = 0;
 		this.valSet = [0, 0, 0, 0];
+	}
+	animate()
+	{
+		if(this.active === 1)
+		{
+			if(this.frames <= 10)
+			{
+				this.generate()
+				//animate
+				this.frames++;
+			}
+			else
+			{
+				engine.state = 1;
+				this.active = 0;
+				engine.update();
+			}
+		}
+	}
+	startAnimation()
+	{
+		this.frames = 0;
+		this.active = 1;
 	}
 }

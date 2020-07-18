@@ -53,15 +53,19 @@ class Board
 	}
 	clear()
 	{
-		var row1 = document.querySelectorAll("#rowP2 th");
+		//var row1 = document.querySelectorAll("#rowP2 th");
 		var row2 = document.querySelectorAll("#rowP1 th");
 		var row3 = document.querySelectorAll("#warZone th");
 		for(var i=0; i<8; i++)
 		{
-			row1[i].innerHTML="";
-			row2[i].innerHTML="";
-			row3[i].innerHTML="";
+			//row1[i].style.pointerEvents = 'none';
+			//row1[i].style.filter="brightness(100%)";
+			
+			row2[i].style.pointerEvents = 'none';
+			row2[i].style.filter="brightness(100%)";
+			
+			row3[i].style.pointerEvents = 'none';
+			row3[i].style.filter="brightness(100%)";
 		}
-		document.write("Cleared<br/>");
 	}
 }
