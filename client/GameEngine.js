@@ -138,7 +138,7 @@ class GameEngine
 			//no game loaded
 		}
 	}
-	deactiveBoard(board)
+	deactiveBoard()
 	{
 		board.clear();
 	}
@@ -206,6 +206,16 @@ class GameEngine
 	
 }
 
+function write(begin, value)
+{
+	document.write(begin,  value, "<br/>");
+}
+
+player1 = new Player(31415926);
+player2 = new Player(19112000);
+generator = new Generator();
+board = new Board();
+engine = new GameEngine();
 let move;
 let names = ["b1add", "b1e1", "b1e2", "b1e3", "b1e4",
 						 "wze5", "wze6", "wze7", "wze8", "wze9", "wze10", "wze11", "wze12",
@@ -472,4 +482,5 @@ function setup()
 		engine.update();
 	}
 	}
+	engine.deactiveBoard();
 }

@@ -22,38 +22,69 @@ table
 {
 	margin-left: auto;
 	margin-right: auto;
+	!background-image: url("textures/Tile3.png");
+	!background-size: cover;
+	!padding: 16px;
 }
 #rowP2
 {
-	background-color: #0080ff;
+	
 }
 #rowP1
 {
-	background-color: #80ff00;
+	
 }
 #warZone
 {
-	background-color: #909090;
+	
 }
 .empty
 {
 	border: none;
-	background-color: #f09090;
 }
 .special
 {
-	border-color: white;
-	background-image: url("OnOff.png");
-	background-size: cover;
+	background-image: url("textures/Tile1s.png");
 }
-
+.dark
+{
+	background-image: url("textures/Tile1.png");
+}
+.light
+{
+	background-image: url("textures/Tile2.png");
+}
+#b1add
+{
+	background-image: url("textures/TileAdd.png");
+}
+#b1remove
+{
+	background-image: url("textures/TileRemove.png");
+}
+#b1e1
+{
+	background-image: url("textures/Tile2p1.png");
+}
+#wze6
+{
+	background-image: url("textures/Tile1p1.png");
+}
+#wze9
+{
+	background-image: url("textures/Tile2p2.png");
+}
+#b2e14
+{
+	background-image: url("textures/Tile1sp2.png");
+}
 #div1
 {
-	background-color: #909090; 
+	background-color: #f09090;
 }
 #div2
 {
-	background-color: #f09090; 
+	background-color: #909090; 
 	padding-bottom: 50px;
 }
 #div3
@@ -66,45 +97,50 @@ table
 }
 #genSpace
 {
-	background-color: #ff00ff;
+	background-size: cover;
+	background-image: url("textures/GeneratorBody.png");
 	height: 96px;
 	width: 336px;
 	position: relative
 }
 #box1
 {
-	background-color: #00ff00;
+	background-size: cover;
+	background-image: url("textures/GeneratorLightOff.png");
 	height: 64px;
 	width: 64px;
 	position: absolute;
-	top: 16px;
+	top: -16px;
 	left: 98px;
 }
 #box2
 {
-	background-color: #ffffff;
+	background-size: cover;
+	background-image: url("textures/GeneratorLightOn.png");
 	height: 64px;
 	width: 64px;
 	float: right;
 	margin-right: 16px;
-	margin-top: 16px;
+	margin-top: -16px;
 }
 #box3
 {
-	background-color: #ff0000;
+	background-size: cover;
+	background-image: url("textures/GeneratorLightOff.png");
 	height: 64px;
 	width: 64px;
 	float: left;
 	margin-left: 16px;
-	margin-top: 16px;
+	margin-top: -16px;
 }
 #box4
 {
-	background-color: #0000ff;
+	background-size: cover;
+	background-image: url("textures/GeneratorLightOff.png");
 	height: 64px;
 	width: 64px;
 	position: absolute;
-	top: 16px;
+	top: -16px;
 	left: 176px;
 }
 #throwBtn
